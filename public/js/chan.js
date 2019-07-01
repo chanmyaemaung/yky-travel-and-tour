@@ -178,7 +178,8 @@ var arrLang = {
         // SERVICE
         'os_our': 'Our',
         'os_ser': 'Services',
-        'os_book': 'BookingTickets',
+        'os_book1': 'Booking',
+        'os_book2': 'Tickets',
         'os_plan': 'PlanningTours',
         'os_docu': 'Documents',
         'os_bookho': 'BookingHotel',
@@ -194,7 +195,7 @@ var arrLang = {
         'sn_travel_company': 'ရေကြည်ရာ အေဂျင်စီ',
         'sn_home': 'မူလ',
         'sn_contact': 'ဆက်သွယ်ရန်',
-        'sn_desti': 'ခရီးစဉ်များ',
+        'sn_desti': 'စရိတ်ငြိမ်းခရီးစဉ်များ',
         'sn_team': 'ကျွနု်ပ်တို့၏ ဝန်ထမ်းများ',
         'sn_gallery': 'ခရီးသွားဓာတ်ပုံများ',
         'sn_blog': 'ဘလော့စာမျက်နှာ',
@@ -202,12 +203,13 @@ var arrLang = {
         // SERVICE
         'os_our': 'ကျွန်ုပ်တို့၏ ',
         'os_ser': 'ဝန်ဆောင်မှုများ',
-        'os_book': 'လက်မှတ်',
+        'os_book1': 'ခရီးသွား',
+        'os_book2': 'လက်မှတ်အစီအစဉ်',
         'os_plan': 'အစီအစဉ်',
         'os_docu': 'စာတမ်းကိစ္စ',
-        'os_bookho': 'ဟော်တယ်',
+        'os_bookho': 'ဟိုတယ်များ',
         'os_travel': 'ခရီးသွားအာမခံ',
-        'os_trans': 'လမ်းခရီး'
+        'os_trans': 'အမြန်ကား'
     }
 };
 

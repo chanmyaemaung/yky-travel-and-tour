@@ -1,8 +1,11 @@
 /*====== Link Google Fonts API ========*/
 @import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700");
 @import url('https://fonts.googleapis.com/css?family=Nunito:300,400,600,700&display=swap');
-@import url(//fonts.googleapis.com/earlyaccess/notosanskannada.css);
-/* Unicode */
+
+@font-face {
+    font-family: 'MON3 Anonta 1';
+    src: local('MON3 Anonta 1'), url('https://mmwebfonts.comquas.com/fonts/mon3.woff') format('woff'), url('https://mmwebfonts.comquas.com/fonts/mon3.ttf') format('ttf');
+}
 
 /*==================================================
 1. GENERAL 
@@ -1059,6 +1062,7 @@ footer#footer .row.copyright span {
     font-weight: 600;
 }
 
-.chan-unicode {
-    font-family: 'Noto Sans Kannada', sans-serif;
+.mm-font {
+    font-family: "Pyidaungsu", "MON3 Anonta 1";
+    width: 48%;
 }
