@@ -710,12 +710,12 @@ nav a.button-collapse {
 
 .section.destinations .vd-des-left {
     float: left;
-    width: 90%;
+    width: 70%;
 }
 
 .section.destinations .vd-des-right {
     float: left;
-    width: 10%;
+    width: 30%;
 }
 
 .section.destinations .vacation-place {
