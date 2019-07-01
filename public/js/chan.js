@@ -180,10 +180,13 @@ var arrLang = {
         'os_ser': 'Services',
         'os_book1': 'Booking',
         'os_book2': 'Tickets',
-        'os_plan': 'PlanningTours',
+        'os_plan1': 'PlanningTours',
+        'os_plan2': 'Tours',
         'os_docu': 'Documents',
-        'os_bookho': 'BookingHotel',
-        'os_travel': 'TravelInsurance',
+        'os_bookho1': 'Booking',
+        'os_bookho2': 'Hotel',
+        'os_travel1': 'Travel',
+        'os_travel2': 'Insurance',
         'os_trans': 'Transport'
     },
     'mm': {
@@ -205,10 +208,13 @@ var arrLang = {
         'os_ser': 'ဝန်ဆောင်မှုများ',
         'os_book1': 'ခရီးသွား',
         'os_book2': 'လက်မှတ်အစီအစဉ်',
-        'os_plan': 'အစီအစဉ်',
-        'os_docu': 'စာတမ်းကိစ္စ',
-        'os_bookho': 'ဟိုတယ်များ',
-        'os_travel': 'ခရီးသွားအာမခံ',
+        'os_plan1': 'အဖွဲ့လိုက်',
+        'os_plan2': 'ခရီးစဉ်များ',
+        'os_docu': 'ဗီဇာဝန်ဆောင်မှုများ',
+        'os_bookho1': 'ဟိုတယ်',
+        'os_bookho2': 'ဘွတ်ကင်များ',
+        'os_travel1': 'ခရီးသွားအာမခံ',
+        'os_travel2': 'ဝန်ဆောင်မှုများ',
         'os_trans': 'အမြန်ကား'
     }
 };
