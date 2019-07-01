@@ -76,7 +76,7 @@
                     <div class="in-content">
                         <div class="in-in-content">
                             <i class="fa fa-car" aria-hidden="true" style="color: #3f22d1;"></i>
-                            <h5>Transport</h5>
+                            <h5><span class="lang chan-font" key="os_trans">Transport</span></h5>
                         </div>
                     </div>
                 </div>
@@ -84,13 +84,15 @@
         </div>
     </div>
 </div>
+
+<!-- PROMO  -->
 <div class="section promo">
     <div id="promo-item" class="owl-carousel center">
         <div class="item theme-gradation">
             <div class="promo-caption">
-                <h2>See Our Special<br>Promo Offers</h2>
+                <h2><span class="lang chan-font" key="p_special1">See Our Special</span><br><span class="lang chan-font" key="p_special2">Promo Offers</span></h2>
                 <a href="<%= jsonData.phone %>">
-                    <div class="btn transparent">Get In Touch!</div>
+                    <div class="btn transparent"><span class="lang" key="p_getin">Get In Touch!</span></div>
                 </a>
             </div>
             <div class="background-promo" style="background-image: url(img/landscape2.jpg);">
@@ -98,9 +100,9 @@
         </div>
         <div class="item theme-gradation">
             <div class="promo-caption">
-                <h2>Best of Destinations<br>Worldwide</h2>
+                <h2><span class="lang chan-font" key="p_best_destin1">Best of Destinations</span></<br><span class="lang chan-font" key="p_best_destin2">Worldwide</span></h2>
                 <a href="<%= jsonData.phone %>">
-                    <div class="btn transparent">Get In Touch!</div>
+                    <div class="btn transparent"><span class="lang" key="p_getin">Get In Touch!</span></div>
                 </a>
             </div>
             <div class="background-promo" style="background-image: url(img/landscape2.jpg);">
@@ -116,7 +118,7 @@
         <div class="row row-title">
             <div class="col s12">
                 <div class="section-title">
-                    <span class="theme-secondary-color">Knowledges</span> News
+                    <span class="theme-secondary-color lang" key="new_knowledge1">Knowledges</span>&nbsp;<span class="lang" key="new_knowledge2">News</span>
                 </div>
             </div>
         </div>
@@ -132,7 +134,7 @@
                         <img src="<%= post.image %>" alt="yky-image">
                         <h3 class="flow-text"><%- post.content.substring(0,150) %>...</h3>
                         <div class="readmore-news">
-                            <a href="/blog/<%= post._id %>" class="waves-effect waves-light btn">Read More</a>
+                            <a href="/blog/<%= post._id %>" class="waves-effect waves-light btn"><span class="lang chan-font" key="new_readmore">Read More</span></a>
                         </div>
                     </div>
                 </div>
@@ -150,7 +152,7 @@
         <div class="row">
             <div class="col s12">
                 <div class="section-title">
-                    <span class="theme-secondary-color">Vacations</span> destinations
+                    <span class="theme-secondary-color lang chan-font" key="des_vaca1">Vacations</span>&nbsp;<span class="lang chan-font" key="des_vaca2">destinations</span>
                 </div>
             </div>
         </div>
@@ -164,8 +166,8 @@
                     </div>
                     <div class="vd-des">
                         <div class="vd-des-left">
-                            <div class="vd-des-name"><%= desti.dTitle %></div>
-                            <div class="vd-des-location"><%= desti.dBody %></div>
+                            <div class="vd-des-name chan-font"><%= desti.dTitle %></div>
+                            <div class="vd-des-location chan-font"><%= desti.dBody %></div>
                         </div>
                         <div class="vd-des-right">
                             <div class="vd-des-price">
@@ -232,13 +234,13 @@
 </div>
 <!-- END GALLERY -->
 
-<!-- TESTIMONIAL  -->
+<!-- STAFF -->
 <div class="section testimonial">
     <div class="testimonial-wrap">
         <div class="container">
             <div class="row">
                 <div class="col s12">
-                    <div class="section-title">OUR OFFICE STAFF</div>
+                    <div class="section-title"><span class="lang chan-font" key="sn_team">OUR OFFICE STAFF</span></div>
                 </div>
             </div>
             <div class="row">
@@ -254,9 +256,7 @@
                                     </div>
                                 </div>
                                 <div class="client-content">
-                                    <p>
-                                        <%- data.sBody %>
-                                    </p>
+                                    <p class="chan-font1"><%- data.sBody %></p>
                                     <div class="client-title">
                                         <h4><%= data.sName %></h4>
                                         <h5><%= data.sPosition %></h5>

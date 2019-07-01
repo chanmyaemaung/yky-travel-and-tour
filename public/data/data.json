@@ -17,7 +17,7 @@
     "staff": [
         {
             "sName": "Mr. Aye Kyaw",
-            "sBody": "<p>စဉ်းစားပါ + စုံစမ်းပါ + လေ့လာပါ + ယုံကြည်မှု့ ရှိမှ အလုပ်အပ်ပါ။</p><p>No.(260/262A), 40th Street (Upper block), Kyauktada Township, Yangon/Myanmar</p>",
+            "sBody": "စဉ်းစားပါ + စုံစမ်းပါ + လေ့လာပါ + ယုံကြည်မှု့ ရှိမှ အလုပ်အပ်ပါ။<p>No.(260/262A), 40th Street (Upper block), Kyauktada Township, Yangon/Myanmar</p>",
             "sImage": "https://i.imgur.com/Ou3mmKAg.jpg",
             "sPosition": "Director",
             "sphone": "tel:+95967155333",
@@ -79,32 +79,32 @@
     "_this_is_for_the_destination_section": "This is the Destination Sectioin",
     "destination": [
         {
-            "dTitle": "Express Northbound || Vitenam",
-            "dBody": "We will give service to you soon...",
+            "dTitle": "မြောက်ပိုင်းခရီးစဉ် || ဗီယက်နမ်",
+            "dBody": "မကြာခင် ဝန်ဆောင်မှုပေးသွားမည်ဖြစ်ပါသည်။",
             "dPrice": "730",
             "dImage": "https://i.imgur.com/iKIO4bK.jpg"
         },
         {
-            "dTitle": "Bali Bucket List || Indonesia",
-            "dBody": "We will give service to you soon...",
+            "dTitle": "ဘာလီကျွန်းခရီးစဉ် | အင်ဒိုနီးရှား",
+            "dBody": "မကြာခင် ဝန်ဆောင်မှုပေးသွားမည်ဖြစ်ပါသည်။",
             "dPrice": "790 USD",
             "dImage": "https://i.imgur.com/t1d11ED.jpg"
         },
         {
-            "dTitle": "Classic || Cambodia",
-            "dBody": "We will give service to you soon...",
+            "dTitle": "ဂန္ထဝင်မြောက်တဲ့ ခရီးစဉ် | ကမ္ဘောဒီးယား",
+            "dBody": "မကြာခင် ဝန်ဆောင်မှုပေးသွားမည်ဖြစ်ပါသည်။",
             "dPrice": "600",
             "dImage": "https://i.imgur.com/aUKE2eX.jpg"
         },
         {
-            "dTitle": "Southwest USA national parks tour from Las Vegas",
-            "dBody": "We will give service to you soon...",
+            "dTitle": "အမေရိကန်နိုင်ငံ အမျိုးသားဥယျာဉ်ခရီးစဉ်",
+            "dBody": "မကြာခင် ဝန်ဆောင်မှုပေးသွားမည်ဖြစ်ပါသည်။",
             "dPrice": "865",
             "dImage": "https://i.imgur.com/JZDdj6S.jpg"
         },
         {
-            "dTitle": "A Taste of Eastern Europe || Germany, Austria, Hungary, Slovakia & Czech ",
-            "dBody": "We will give service to you soon...",
+            "dTitle": "ဂျာမနီ၊ သြစတြီးယား၊ ဟန်ဂေရီ၊ လိုဗက်ကီးယား နှင့် ချက်ခ်",
+            "dBody": "မကြာခင် ဝန်ဆောင်မှုပေးသွားမည်ဖြစ်ပါသည်။",
             "dPrice": "1,051",
             "dImage": "https://i.imgur.com/BRBiE4v.jpg"
         }

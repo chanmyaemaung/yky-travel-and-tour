@@ -642,6 +642,7 @@ nav a.button-collapse {
 .section.news {
     padding-bottom: 5px;
     background-color: #ededed;
+    font-family: "Pyidaungsu", "MON3 Anonta 1";
 }
 
 #page-content .section.news {
@@ -694,6 +695,7 @@ nav a.button-collapse {
     text-align: center;
     padding-top: 10px;
 }
+
 
 /*==================================================
 7. DESTINATIONS
@@ -1062,6 +1064,7 @@ footer#footer .row.copyright span {
     font-weight: 600;
 }
 
+/* Span */
 .chan-font {
     font-family: "Pyidaungsu", "MON3 Anonta 1";
     width: 48%;

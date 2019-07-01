@@ -165,13 +165,18 @@ var arrLang = {
         // HEADER
         'mn_yky': 'Yay Kyi Yar',
 
+        // TOP MENU
+        'tm_acc': 'Account',
+        'tm_trip': 'My Trip',
+        'tm_favo': 'favorite',
+
         // SIDE NAV
         'sn_yky': 'Yay Kyi Yar',
-        'sn_travel_company': 'Travel &amp; Tour Co., Ltd.',
+        'sn_travel_company': 'Travel & Tour Co., Ltd.',
         'sn_home': 'Home',
         'sn_contact': 'Contact',
         'sn_desti': 'Destination',
-        'sn_team': 'Our Team',
+        'sn_team': 'Our Office Staff',
         'sn_gallery': 'Gallery',
         'sn_blog': 'Blog',
 
@@ -187,11 +192,32 @@ var arrLang = {
         'os_bookho2': 'Hotel',
         'os_travel1': 'Travel',
         'os_travel2': 'Insurance',
-        'os_trans': 'Transport'
+        'os_trans': 'Transport',
+
+        // PROMO
+        'p_special1': 'See Our Special!',
+        'p_special2': 'Promo Offers',
+        'p_best_destin1': 'Best of ',
+        'p_best_destin2': 'Destinations',
+        'p_getin': 'Get In Touch!',
+
+        // NEW
+        'new_knowledge1': 'Knowledges',
+        'new_knowledge2': ' News',
+
+        // DESTINATION
+        'des_vaca1': 'Vacations',
+        'des_vaca2': ' destinations'
+
     },
     'mm': {
         // HEADER
         'mn_yky': 'ရေကြည်ရာ',
+
+        // TOP MENU
+        'tm_acc': 'အကောင့်',
+        'tm_trip': 'ကျွန်ုပ်တို့၏ ခရီးစဉ်များ',
+        'tm_favo': 'အနှစ်သက်ဆုံး ခရီးစဉ်များ',
 
         // SIDE NAV
         'sn_yky': 'ရေကြည်ရာ',
@@ -199,7 +225,7 @@ var arrLang = {
         'sn_home': 'မူလ',
         'sn_contact': 'ဆက်သွယ်ရန်',
         'sn_desti': 'စရိတ်ငြိမ်းခရီးစဉ်များ',
-        'sn_team': 'ကျွနု်ပ်တို့၏ ဝန်ထမ်းများ',
+        'sn_team': 'ကျွနု်ပ်တို့၏ ရုံးဝန်ထမ်းများ',
         'sn_gallery': 'ခရီးသွားဓာတ်ပုံများ',
         'sn_blog': 'ဘလော့စာမျက်နှာ',
 
@@ -215,7 +241,25 @@ var arrLang = {
         'os_bookho2': 'ဘွတ်ကင်များ',
         'os_travel1': 'ခရီးသွားအာမခံ',
         'os_travel2': 'ဝန်ဆောင်မှုများ',
-        'os_trans': 'အမြန်ကား'
+        'os_trans': 'အမြန်ကား',
+
+        // PROMO
+        'p_special1': 'ကျွန်ုပ်တို့၏အထူးအရောင်း',
+        'p_special2': 'မြှင့်ကမ်းလှမ်းချက်ကိုကြည့်ပါ',
+        'p_best_destin1': 'ကမ္ဘာအနှံ့',
+        'p_best_destin2': 'အကောင်းဆုံးခရီးစဉ်များအတွက်',
+        'p_getin': 'Call Now!',
+
+        // NEW
+        'new_knowledge1': 'ဗဟုသုတ',
+        'new_knowledge2': 'နေ့စဉ်သတင်းများ',
+        'new_readmore': ' ဆက်လက်ဖတ်ရှုပါရန်',
+        'new_readmore': 'READ MORE',
+
+        // DESTINATION
+        'des_vaca1': 'စရိတ်ငြိမ်းလည်ပတ်ဖို့ကောင်းသော',
+        'des_vaca2': 'ခရီးစဉ်များ',
+
     }
 };
 
