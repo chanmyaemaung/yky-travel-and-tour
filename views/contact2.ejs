@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <title>Title</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-8 col-lg-6 pb-5 mt-3">
+
+                <!--Form with header-->
+
+                <form action="/contact" method="POST">
+                    <div class="card border-secondary rounded-0 shadow">
+                        <div class="card-header p-0">
+                            <div class="bg-info text-white text-center py-2">
+                                <h3><i class="fa fa-envelope"></i> Contact&nbsp;Us</h3>
+                                <p class="m-0">we are ready 24/5 hours to support.</p>
+                            </div>
+                        </div>
+                        <div class="card-body p-3">
+
+                            <!--Body-->
+                            <div class="form-group">
+                                <div class="input-group mb-2">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text"><i class="fa fa-user text-info"></i></div>
+                                    </div>
+                                    <input type="text" class="form-control" id="name" placeholder="Name" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="input-group mb-2">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text"><i class="fa fa-envelope text-info"></i></div>
+                                    </div>
+                                    <input type="email" class="form-control" id="email" placeholder="Email" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="input-group mb-2">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text"><i class="fa fa-phone text-info"></i></div>
+                                    </div>
+                                    <input type="number" class="form-control" id="Phone" placeholder="Phone number"
+                                        required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="input-group mb-2">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text"><i class="fa fa-question-circle-o text-info"></i>
+                                        </div>
+                                    </div>
+                                    <input type="text" class="form-control" id="mainsub" placeholder="Subject Title"
+                                        required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="input-group mb-2">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text"><i class="fa fa-comment text-info"></i></div>
+                                    </div>
+                                    <textarea id="text" class="form-control" placeholder="Content" required></textarea>
+                                </div>
+                            </div>
+
+                            <div class="text-center">
+                                <input type="submit" value="Send" class="btn btn-info btn-block rounded-0 py-2">
+                            </div>
+                        </div>
+
+                    </div>
+                </form>
+                <!--Form with header-->
+
+
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            if ($('textarea#chan').length) {
+                CKEDITOR.replace('chan');
+            }
+        })
+
+        $("form").on("submit", e => {
+            e.preventDefault();
+            const name = $("#name")
+                .val()
+                .trim();
+            const email = $("#email")
+                .val()
+                .trim();
+            const phone = $("#phone")
+                .val()
+                .trim();
+            const mainsub = $("#mainsub")
+                .val()
+                .trim();
+            const text = $("#text")
+                .val()
+                .trim();
+            const data = {
+                name,
+                email,
+                phone,
+                mainsub,
+                text
+            };
+            $.post('/contact', data, function () {
+                console.log('Server received our data');
+            });
+        });
+    </script>
+</body>
+
+</html>
