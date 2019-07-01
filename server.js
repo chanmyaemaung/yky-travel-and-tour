@@ -85,7 +85,7 @@ app.use((req, res) => {
 })
 
 // Start the server
-const port = process.env.PORT || 4444
+const port = process.env.PORT || 9999
 app.listen(port, () => {
     log(`Server is running on port >>> ${port} <<<<`)
 })
