@@ -16,23 +16,23 @@
                 <div class="col s12">
                     <!-- Stat loop from here -->
                     <% jsonData.destination.forEach( (desti) => { %>
-                    <a href="/">
+                    <a href="#!">
                         <div class="vacation-place card z-depth-3">
                             <div class="vd-photo">
-                                <img src="<%= desti.dImage %>" alt="img">
+                                <img src="<%= desti.dImage %>" alt="YKY-DESTINATION">
                             </div>
                             <div class="vd-des">
                                 <div class="vd-des-left">
                                     <div class="vd-des-name">
-                                        <p class=" chan-font"><%= desti.dTitle %></p>
+                                        <%- desti.dTitle %>
                                     </div>
                                     <div class="vd-des-location">
-                                        <p class=" chan-font"><%= desti.dBody %></p>
+                                        <%- desti.dBody %>
                                     </div>
                                 </div>
                                 <div class="vd-des-right">
                                     <div class="vd-des-price">
-                                        <i class="fa fa-tag" aria-hidden="true"></i> $<%= desti.dPrice %>
+                                        <i class="fa fa-tag" aria-hidden="true"></i> $<%- desti.dPrice %>
                                     </div>
                                 </div>
                                 <div class="clear"></div>

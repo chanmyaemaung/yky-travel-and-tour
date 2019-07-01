@@ -710,12 +710,12 @@ nav a.button-collapse {
 
 .section.destinations .vd-des-left {
     float: left;
-    width: 70%;
+    width: 90%;
 }
 
 .section.destinations .vd-des-right {
     float: left;
-    width: 30%;
+    width: 10%;
 }
 
 .section.destinations .vacation-place {
@@ -739,7 +739,7 @@ nav a.button-collapse {
 .section.destinations .vd-des .vd-des-name {
     font-weight: 600;
     color: #342580;
-    font-size: 18px;
+    font-display: 100%;
 }
 
 .section.destinations .vd-des .vd-des-price {
@@ -1068,4 +1068,5 @@ footer#footer .row.copyright span {
 .chan-font {
     font-family: "Pyidaungsu", "MON3 Anonta 1";
     width: 48%;
+    font-size: 100%;
 }

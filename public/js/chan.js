@@ -207,7 +207,11 @@ var arrLang = {
 
         // DESTINATION
         'des_vaca1': 'Vacations',
-        'des_vaca2': ' destinations'
+        'des_vaca2': ' destinations',
+
+        // PHOTO GALLERY
+        'pg_gallery1': 'PHOTO',
+        'pg_gallery2': 'GALLERY'
 
     },
     'mm': {
@@ -257,8 +261,12 @@ var arrLang = {
         'new_readmore': 'READ MORE',
 
         // DESTINATION
-        'des_vaca1': 'စရိတ်ငြိမ်းလည်ပတ်ဖို့ကောင်းသော',
+        'des_vaca1': 'စရိတ်ငြိမ်း',
         'des_vaca2': 'ခရီးစဉ်များ',
+
+        // PHOTO GALLERY
+        'pg_gallery1': 'ခရီးသွား',
+        'pg_gallery2': 'ဓာတ်ပုံများ'
 
     }
 };

@@ -16,12 +16,12 @@
             <div class="col s12">
                 <div class="news-content">
                     <div class="news-detail">
-                        <h4 class="news-title"><a href=""><%= post.title %></a></h4>
+                        <h5 class="news-title"><a href=""><%= post.title %></a></h5>
                         <div class="date">
                             <span><i class="fa fa-calendar"></i> <%= post.date.toDateString() %></span>
                         </div>
                         <img src="<%= post.image %>" alt="Yay Kyi Yar - Images">
-                        <h4 class="flow-text"><%- post.content.substring(0,150) %>...</h4>
+                        <h5 class="flow-text"><%- post.content.substring(0,150) %>...</h5>
                         <div class="readmore-news">
                             <a href="/blog/<%= post._id %>" class="readmore-btn">Read More</a>
                         </div>
