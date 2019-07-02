@@ -1,69 +1,113 @@
-<% include _layouts/header %>
+<!DOCTYPE html>
+<html lang="en">
 
-<div class="section">
-    <div class="container">
-        <div class="row">
-            <div class="card-body">
-                <!-- Form with validation -->
-                <div class="col s12">
-                    <div class="card-panel">
-                        <h4 class="header2 center">Contact <span class="theme-secondary-color">Us</span></h4>
-                        <p class="crad-text center">we are ready 24/5 hours to support.</p>
-                        <div class="row">
-                            <form method="POST" action="/contact" class="col s12">
-                                <div class="row">
-                                    <div class="input-field col s12">
-                                        <i class="mdi-action-account-circle prefix"></i>
-                                        <input id="name" type="text" class="validate" required>
-                                        <label for="first_name">Name</label>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="input-field col s12">
-                                        <i class="mdi-communication-email prefix"></i>
-                                        <input id="email" type="email" class="validate" required>
-                                        <label for="email">Email</label>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="input-field col s12">
-                                        <i class="mdi-action-lock-outline prefix"></i>
-                                        <input id="phone" type="text" class="validate" required>
-                                        <label for="phone">Phone</label>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="input-field col s12">
-                                        <i class="mdi-action-lock-outline prefix"></i>
-                                        <input id="mainsub" type="text" class="validate" required>
-                                        <label for="subject">Subject Title</label>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="input-field col s12">
-                                        <i class="mdi-action-question-answer prefix"></i>
-                                        <textarea id="text" class="materialize-textarea validate"
-                                            length="120"></textarea>
-                                        <label for="subject">Content</label>
-                                    </div>
-                                    <div class="row">
-                                        <div class="input-field col s12">
-                                            <button class="btn dark-blue waves-effect waves-light btn-block col s12"
-                                                type="submit" name="action">Submit
-                                                <i class="mdi-content-send right"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
+<head>
+    <title><%= title %></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--===============================================================================================-->
+    <link rel="icon" type="image/png" href="/img/yky-img/logo.png" />
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/contact/vendor/bootstrap/css/bootstrap.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/contact/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/contact/fonts/iconic/css/material-design-iconic-font.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/contact/vendor/animate/animate.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/contact/vendor/css-hamburgers/hamburgers.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/contact/vendor/animsition/css/animsition.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/contact/vendor/select2/select2.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/contact/vendor/daterangepicker/daterangepicker.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/contact/css/util.css">
+    <link rel="stylesheet" type="text/css" href="/contact/css/main.css">
+    <!--===============================================================================================-->
+</head>
+
+<body>
+
+
+    <div class="container-contact100">
+        <div class="contact100-map" id="google_map" data-map-x="40.722047" data-map-y="-73.986422"
+            data-pin="images/icons/map-marker.png" data-scrollwhell="0" data-draggable="1"></div>
+
+        <div class="wrap-contact100">
+            <form action="/contact" method="POST" class="contact100-form validate-form">
+                <span class="contact100-form-title">
+                    Contact Us
+                </span>
+
+                <div class="wrap-input100 validate-input" data-validate="Please enter your name">
+                    <input class="input100" type="text" placeholder="Full Name" id="name" name="name">
+                    <span class="focus-input100"></span>
                 </div>
+
+                <div class="wrap-input100 validate-input" data-validate="Please enter email: e@a.x">
+                    <input class="input100" type="text" placeholder="Email" id="email" name="email">
+                    <span class="focus-input100"></span>
+                </div>
+
+                <div class="wrap-input100 validate-input" data-validate="Please enter phone number: 09...">
+                    <input class="input100" type="number" placeholder="Phone Number" id="phone" name="phone">
+                    <span class="focus-input100"></span>
+                </div>
+
+                <div class="wrap-input100 validate-input" data-validate="Please enter your title: title...">
+                    <input class="input100" type="text" placeholder="Asking Title" id="mainsub" name="mainsub">
+                    <span class="focus-input100"></span>
+                </div>
+
+                <div class="wrap-input100 validate-input" data-validate="Please enter your message">
+                    <textarea class="input100" placeholder="Your Message" id="text" name="text"></textarea>
+                    <span class="focus-input100"></span>
+                </div>
+
+                <div class="container-contact100-form-btn">
+                    <button type="submit" class="contact100-form-btn">
+                        Send Email
+                    </button>
+                </div>
+            </form>
+
+            <div class="contact100-more">
+                Contact our 24/5 call center: <span class="contact100-more-highlight">+959 518 3828</span>
             </div>
         </div>
     </div>
-</div>
-</div>
-</div>
 
-<% include _layouts/footer %>
+
+
+    <div id="dropDownSelect1"></div>
+    <!--===============================================================================================-->
+    <script src="/js/chan.js"></script>
+    <!--===============================================================================================-->
+    <script src="/contact/vendor/jquery/jquery-3.2.1.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="/contact/vendor/animsition/js/animsition.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="/contact/vendor/bootstrap/js/popper.js"></script>
+    <script src="/contact/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="/contact/vendor/select2/select2.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="/contact/vendor/daterangepicker/moment.min.js"></script>
+    <script src="/contact/vendor/daterangepicker/daterangepicker.js"></script>
+    <!--===============================================================================================-->
+    <script src="/contact/vendor/countdowntime/countdowntime.js"></script>
+    <!--===============================================================================================-->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKFWBqlKAGCeS1rMVoaNlwyayu0e0YRes"></script>
+    <script src="/contact/js/map-custom.js"></script>
+    <!--===============================================================================================-->
+    <script src="/contact/js/main.js"></script>
+    <!--===============================================================================================-->
+
+
+
+</body>
+
+</html>

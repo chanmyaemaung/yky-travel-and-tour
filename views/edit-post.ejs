@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Edit: <%= title %></title>
     <style>
         .my-form {
             background: #efefef;
@@ -76,8 +76,6 @@
             text-decoration: none;
         }
 
-        .cta-button:visited {}
-
         .cta-button:hover,
         #submit:hover {
             background: #666;
@@ -95,20 +93,22 @@
         <p>
             <label for="name">Title *</label>
             <span class="wrap">
-                <input type="text" name="post[title]" value="<%= post.title %>" size="40" class="form-control text" id="name" />
+                <input type="text" name="post[title]" value="<%= post.title %>" size="40" class="form-control text"
+                    id="name" />
             </span>
         </p>
         <p>
             <label for="image">Image URL *</label>
             <span class="wrap">
-                <input type="text" name="post[image]" value="<%= post.image %>" size="40" class="form-control text" id="image" />
+                <input type="text" name="post[image]" value="<%= post.image %>" size="40" class="form-control text"
+                    id="image" />
             </span>
         </p>
         <p>
             <label for="content">Your content:</label>
             <span class="wrap">
-                <textarea cols="40" name="post[content]" rows="10" class="textarea" id=""
-                    aria-invalid="false"><%= post.content %></textarea>
+                <textarea id="chan" cols="40" name="post[content]" rows="10" class="textarea"
+                    aria-invalid="false"><%- post.content %></textarea>
             </span>
         </p>
         <p class="cta-holder">
@@ -116,16 +116,10 @@
         </p>
     </form>
 
-    <script>
-        $(document).ready(function () {
-            $("form.my-form input, form.my-form textarea, form.my-form input").focus(function () {
-                $(this).parent().parent().addClass("focus");
-            });
-            $("form.my-form input, form.my-form textarea, form.my-form input").blur(function () {
-                $(this).parent().parent().removeClass("focus");
-            });
-        })
-    </script>
+    <!-- Editor -->
+    <script src="//cdn.ckeditor.com/4.11.4/standard/ckeditor.js"></script>
+    <!-- Custom s/cript -->
+    <script src="/js/chan.js"></script>
 </body>
 
 </html>

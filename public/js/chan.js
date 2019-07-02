@@ -122,43 +122,53 @@
     /*=================== FOOTER ===================*/
     $('#page-content').css('min-height', $(document).height() - ($('#header').height() + $('.section.top-header-menu').height()) - $('#footer').height());
 
-    $(function () {
-        if ($('textarea#chan').length) {
-            CKEDITOR.replace('chan');
-        }
-    })
-
-    $("form").on("submit", e => {
-        e.preventDefault();
-        const name = $("#name")
-            .val()
-            .trim();
-        const email = $("#email")
-            .val()
-            .trim();
-        const phone = $("#phone")
-            .val()
-            .trim();
-        const mainsub = $("#mainsub")
-            .val()
-            .trim();
-        const text = $("#text")
-            .val()
-            .trim();
-        const data = {
-            name,
-            email,
-            phone,
-            mainsub,
-            text
-        };
-        $.post('/contact', data, function () {
-            console.log('Server received our data');
-        });
-    });
-
 
 })(jQuery);
+
+
+$(function () {
+    if ($('textarea#chan').length) {
+        CKEDITOR.replace('chan');
+    }
+})
+
+$(document).ready(function () {
+    $("form.my-form input, form.my-form textarea, form.my-form input").focus(function () {
+        $(this).parent().parent().addClass("focus");
+    });
+    $("form.my-form input, form.my-form textarea, form.my-form input").blur(function () {
+        $(this).parent().parent().removeClass("focus");
+    });
+})
+
+$("form").on("submit", e => {
+    e.preventDefault();
+    const name = $("#name")
+        .val()
+        .trim();
+    const email = $("#email")
+        .val()
+        .trim();
+    const phone = $("#phone")
+        .val()
+        .trim();
+    const mainsub = $("#mainsub")
+        .val()
+        .trim();
+    const text = $("#text")
+        .val()
+        .trim();
+    const data = {
+        name,
+        email,
+        phone,
+        mainsub,
+        text
+    };
+    $.post('/contact', data, function () {
+        console.log('Server received our data');
+    });
+});
 
 var arrLang = {
     'en': {

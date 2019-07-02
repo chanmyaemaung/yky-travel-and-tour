@@ -5,13 +5,17 @@ const log = console.log
 const jsonData = require('../public/data/data.json')
 const router = express.Router()
 
-router.get('/', (req, res) => {
-    res.render('contact', {
-        title: 'Yay Kyi Yar Travel & Tour: Search Yay Kyi Yar Myanmar Hotels, Cheap Flights, Vacations, Tours',
-        navTitle: 'Yay Kyi Yar',
-        company: 'Travel & Tour Co., Ltd.',
-        jsonData: jsonData
-    })
+router.get('/', async (req, res) => {
+    try {
+        await res.render('contact', {
+            title: 'Yay Kyi Yar Travel & Tour: Search Yay Kyi Yar Myanmar Hotels, Cheap Flights, Vacations, Tours',
+            navTitle: 'Yay Kyi Yar',
+            company: 'Travel & Tour Co., Ltd.',
+            jsonData: jsonData
+        })
+    } catch (e) {
+        res.status(500).send(e)
+    }
 })
 
 router.post('/', (req, res) => {
@@ -30,7 +34,7 @@ router.post('/', (req, res) => {
     // // Step 2
     let mailOptions = {
         from: req.body.email,
-        to: 'yaykyiyar7@gmail.com, maungmaungyoker.mmy@gmail.com',
+        to: 'yaykyiyar7@gmail.com',
         cc: 'chanmyaemaung@yahoo.com',
         subject: 'Yay Kyi Yar: ' + req.body.mainsub,
         name: req.body.name,

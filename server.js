@@ -2,8 +2,9 @@ const express = require('express')
 const path = require('path')
 const methodOverride = require('method-override')
 const mongoose = require('mongoose')
-const expressSanitizer = require('express-sanitizer');
 const jsonData = require('./public/data/data.json')
+const bodyParser = require('body-parser')
+const expressSanitizer = require('express-sanitizer')
 const log = console.log
 // Init app
 const app = express()
@@ -11,13 +12,6 @@ const app = express()
 
 // Model Config
 require('./models/posts')
-
-// const options = {
-//     useNewUrlParser: true,
-//     socketTimeoutMS: 60000,
-//     connectTimeoutMS: 90000,
-//     reconnectTries: 1000
-// }
 
 // DB Config
 const db = require('./configs/keys').mongoURI
@@ -28,15 +22,6 @@ mongoose.connect(db, {
     })
     .then(() => log('MongoDB Connection Succeded...'))
     .catch(err => log(err))
-
-// mongoose.connect(db, options)
-//     .then(() => {
-//             log('MongoDB Connection Succeded...')
-//         },
-//         err => {
-//             log(err)
-//         }
-//     )
 
 
 
@@ -52,9 +37,15 @@ app.use(express.urlencoded({
     extended: true
 }))
 
+app.use(bodyParser.urlencoded({
+    extended: true
+}))
+
+app.use(bodyParser.json())
+
 // Mount express-sanitizer middleware here
-app.use(methodOverride("_method"));
-app.use(expressSanitizer());
+app.use(methodOverride('_method'))
+app.use(expressSanitizer())
 
 
 // Set routes
