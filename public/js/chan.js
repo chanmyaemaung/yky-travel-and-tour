@@ -123,11 +123,11 @@
     $('#page-content').css('min-height', $(document).height() - ($('#header').height() + $('.section.top-header-menu').height()) - $('#footer').height());
 
 
-    $(function () {
-        if ($('textarea#chan').length) {
-            CKEDITOR.replace('chan');
-        }
-    })
+    // $(function () {
+    //     if ($('textarea#chan').length) {
+    //         CKEDITOR.replace('chan');
+    //     }
+    // })
 
     $(document).ready(function () {
         $("form.my-form input, form.my-form textarea, form.my-form input").focus(function () {
