@@ -55,6 +55,7 @@ const team = require('./routes/team')
 const gallery = require('./routes/gallery')
 const blog = require('./routes/blog')
 const contact = require('./routes/contact')
+const about = require('./routes/about')
 
 
 // Middleware
@@ -64,6 +65,7 @@ app.use('/team', team)
 app.use('/gallery', gallery)
 app.use('/blog', blog)
 app.use('/contact', contact)
+app.use('/about', about)
 
 // catch error handleing
 app.use((req, res) => {

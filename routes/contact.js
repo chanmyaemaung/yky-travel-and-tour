@@ -34,7 +34,7 @@ router.post('/', (req, res) => {
     // // Step 2
     let mailOptions = {
         from: req.body.email,
-        to: 'yaykyiyar7@gmail.com',
+        to: 'yaykyiyar7@gmail.com,yaykyiyar6@gmail.com',
         cc: 'chanmyaemaung@yahoo.com',
         subject: 'Yay Kyi Yar: ' + req.body.mainsub,
         name: req.body.name,
