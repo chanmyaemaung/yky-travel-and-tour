@@ -23,7 +23,7 @@ router.get('/', async (req, res) => {
                 })
             }
         }).sort({
-            data: 'desc'
+            date: 'desc'
         })
     } catch (e) {
         res.status(200).send(e)
