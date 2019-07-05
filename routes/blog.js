@@ -43,6 +43,8 @@ router.get('/new', async (req, res) => {
             navTitle: 'Yay Kyi Yar',
             company: 'Travel & Tour Co., Ltd.',
             jsonData: jsonData
+        }).sort({
+            date: 'desc'
         })
     } catch (e) {
         res.status(304).send(e)
