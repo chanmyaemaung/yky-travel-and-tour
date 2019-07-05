@@ -61,7 +61,12 @@ router.post('/', async (req, res) => {
                 res.render('new')
             } else {
                 // then, redirect to the blog
-                res.redirect('/blog')
+                res.redirect('/blog', {
+                    title: 'Yay Kyi Yar Travel & Tour: Search Yay Kyi Yar Myanmar Hotels, Cheap Flights, Vacations, Tours',
+                    navTitle: 'Yay Kyi Yar',
+                    company: 'Travel & Tour Co., Ltd.',
+                    jsonData: jsonData
+                })
             }
         })
     } catch (e) {
