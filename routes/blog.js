@@ -25,6 +25,8 @@ router.get('/', async (req, res) => {
                     // postData: postData
                 })
             }
+        }).sort({
+            date: 'desc'
         })
     } catch (e) {
         res.status(200).send(e)
