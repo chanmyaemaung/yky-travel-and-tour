@@ -12,6 +12,8 @@ const session = require('express-session')
 // Init app
 const app = express()
 
+// Passport Config
+require('../configs/passport')(passport)
 
 // Model Config
 require('../models/posts')
@@ -56,22 +58,22 @@ app.use(
         resave: true,
         saveUninitialized: true
     })
-);
+)
 
 // Passport middleware
-app.use(passport.initialize());
-app.use(passport.session());
+app.use(passport.initialize())
+app.use(passport.session())
 
 // Connect flash
-app.use(flash());
+app.use(flash())
 
 // Global variables
 app.use(function (req, res, next) {
-    res.locals.success_msg = req.flash('success_msg');
-    res.locals.error_msg = req.flash('error_msg');
-    res.locals.error = req.flash('error');
-    next();
-});
+    res.locals.success_msg = req.flash('success_msg')
+    res.locals.error_msg = req.flash('error_msg')
+    res.locals.error = req.flash('error')
+    next()
+})
 
 // Set routes
 const index = require('../routes/index')

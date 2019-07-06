@@ -8,7 +8,7 @@ const log = console.log
 const router = express.Router()
 
 // Dashboard
-router.get('/new', ensureAuthenticated, (req, res) =>
+router.get('/blog/new', ensureAuthenticated, (req, res) =>
     res.render('new', {
         user: req.user
     })
@@ -135,16 +135,5 @@ router.put('/:id', async (req, res) => {
         res.status(200).send(e)
     }
 })
-
-// Delete Route
-router.delete('/:id', (req, res) => {
-    res.send('Destroy')
-})
-
-// Post.create({
-//     title: 'Test Blog 2',
-//     image: '',
-//     content: 'Hello this is from a blog'
-// })
 
 module.exports = router
