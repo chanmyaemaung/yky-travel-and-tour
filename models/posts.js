@@ -4,15 +4,18 @@ const mongoose = require('mongoose')
 const postSchema = new mongoose.Schema({
     title: {
         type: String,
-        require: true
+        require: true,
+        trim: true
     },
     image: {
         type: String,
-        require: true
+        require: true,
+        trim: true
     },
     content: {
         type: String,
-        require: true
+        require: true,
+        trim: true
     },
     date: {
         type: Date,
