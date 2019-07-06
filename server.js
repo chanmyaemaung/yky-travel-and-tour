@@ -6,6 +6,10 @@ const jsonData = require('./public/data/data.json')
 const bodyParser = require('body-parser')
 const expressSanitizer = require('express-sanitizer')
 const log = console.log
+const expressLayouts = require('express-ejs-layouts')
+const passport = require('passport')
+const flash = require('connect-flash')
+const session = require('express-session')
 // Init app
 const app = express()
 
@@ -22,7 +26,6 @@ mongoose.connect(db, {
     })
     .then(() => log('MongoDB Connection Succeded...'))
     .catch(err => log(err))
-
 
 
 // View engine setup
@@ -47,6 +50,29 @@ app.use(bodyParser.json())
 app.use(methodOverride('_method'))
 app.use(expressSanitizer())
 
+// Express session
+app.use(
+    session({
+        secret: 'secret',
+        resave: true,
+        saveUninitialized: true
+    })
+);
+
+// Passport middleware
+app.use(passport.initialize());
+app.use(passport.session());
+
+// Connect flash
+app.use(flash());
+
+// Global variables
+app.use(function (req, res, next) {
+    res.locals.success_msg = req.flash('success_msg');
+    res.locals.error_msg = req.flash('error_msg');
+    res.locals.error = req.flash('error');
+    next();
+});
 
 // Set routes
 const index = require('./routes/index')
@@ -66,6 +92,8 @@ app.use('/gallery', gallery)
 app.use('/blog', blog)
 app.use('/contact', contact)
 app.use('/about', about)
+app.use('/', require('./routes/index'))
+app.use('/', require('./routes/users.js'))
 
 // catch error handleing
 app.use((req, res) => {

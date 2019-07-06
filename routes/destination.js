@@ -1,5 +1,4 @@
 const express = require('express')
-const Dest = require('../models/destination')
 const jsonData = require('../public/data/data.json')
 const router = express.Router()
 const log = console.log
