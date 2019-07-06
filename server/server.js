@@ -2,7 +2,7 @@ const express = require('express')
 const path = require('path')
 const methodOverride = require('method-override')
 const mongoose = require('mongoose')
-const jsonData = require('./public/data/data.json')
+const jsonData = require('../public/data/data.json')
 const bodyParser = require('body-parser')
 const expressSanitizer = require('express-sanitizer')
 const log = console.log
@@ -15,10 +15,10 @@ const app = express()
 
 
 // Model Config
-require('./models/posts')
+require('../models/posts')
 
 // DB Config
-const db = require('./configs/keys').mongoURI
+const db = require('../configs/keys').mongoURI
 
 // Connect to MongoDB
 mongoose.connect(db, {
@@ -29,11 +29,11 @@ mongoose.connect(db, {
 
 
 // View engine setup
-app.set('views', path.join(__dirname, 'views'))
+app.set('views', path.join(__dirname, '../views'))
 app.set('view engine', 'ejs')
 
 // Set public folder
-app.use(express.static(path.join(__dirname, 'public')))
+app.use(express.static(path.join(__dirname, '../public')))
 
 // Body Parser middleware
 app.use(express.urlencoded({
@@ -75,13 +75,13 @@ app.use(function (req, res, next) {
 });
 
 // Set routes
-const index = require('./routes/index')
-const destination = require('./routes/destination')
-const team = require('./routes/team')
-const gallery = require('./routes/gallery')
-const blog = require('./routes/blog')
-const contact = require('./routes/contact')
-const about = require('./routes/about')
+const index = require('../routes/index')
+const destination = require('../routes/destination')
+const team = require('../routes/team')
+const gallery = require('../routes/gallery')
+const blog = require('../routes/blog')
+const contact = require('../routes/contact')
+const about = require('../routes/about')
 
 
 // Middleware
@@ -92,8 +92,8 @@ app.use('/gallery', gallery)
 app.use('/blog', blog)
 app.use('/contact', contact)
 app.use('/about', about)
-app.use('/', require('./routes/index'))
-app.use('/', require('./routes/users.js'))
+app.use('/', require('../routes/index'))
+app.use('/', require('../routes/users.js'))
 
 // catch error handleing
 app.use((req, res) => {
