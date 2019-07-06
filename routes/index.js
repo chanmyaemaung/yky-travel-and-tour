@@ -4,15 +4,8 @@ const jsonData = require('../public/data/data.json')
 const mongoose = require('mongoose')
 const Post = mongoose.model('Post')
 const log = console.log
-const { ensureAuthenticated, forwardAuthenticated } = require('../configs/auth');
 const router = express.Router()
 
-// Dashboard
-router.get('/dashboard', ensureAuthenticated, (req, res) =>
-    res.render('dashboard', {
-        user: req.user
-    })
-);
 
 router.get('/', async (req, res) => {
     try {

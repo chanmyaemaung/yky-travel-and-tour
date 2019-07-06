@@ -82,6 +82,8 @@ const gallery = require('../routes/gallery')
 const blog = require('../routes/blog')
 const contact = require('../routes/contact')
 const about = require('../routes/about')
+const login = require('../routes/login')
+const register = require('../routes/register')
 
 
 // Middleware
@@ -92,8 +94,8 @@ app.use('/gallery', gallery)
 app.use('/blog', blog)
 app.use('/contact', contact)
 app.use('/about', about)
-app.use('/', require('../routes/index'))
-app.use('/', require('../routes/users.js'))
+app.use('/login', login)
+app.use('/register', register)
 
 // catch error handleing
 app.use((req, res) => {

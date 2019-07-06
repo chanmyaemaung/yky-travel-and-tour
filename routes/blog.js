@@ -3,10 +3,16 @@ const jsonData = require('../public/data/data.json')
 // const postData = require('../public/data/post.json')
 const mongoose = require('mongoose')
 const Post = mongoose.model('Post')
+const { ensureAuthenticated, forwardAuthenticated } = require('../configs/auth')
 const log = console.log
 const router = express.Router()
 
-
+// Dashboard
+router.get('/new', ensureAuthenticated, (req, res) =>
+    res.render('new', {
+        user: req.user
+    })
+)
 
 // Blog : Show all post from DB
 router.get('/', async (req, res) => {
