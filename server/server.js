@@ -6,7 +6,6 @@ const jsonData = require('../public/data/data.json')
 const bodyParser = require('body-parser')
 const expressSanitizer = require('express-sanitizer')
 const log = console.log
-const expressLayouts = require('express-ejs-layouts')
 const passport = require('passport')
 const flash = require('connect-flash')
 const session = require('express-session')
