@@ -7,6 +7,7 @@ const {
     ensureAuthenticated,
     forwardAuthenticated
 } = require('../configs/auth')
+const passport = require('passport')
 const log = console.log
 const router = express.Router()
 
@@ -97,8 +98,9 @@ router.get('/:id', async (req, res) => {
     }
 })
 
+
 // Edit Post
-router.get('/:id/edit', ensureAuthenticated, async (req, res) => {
+router.get('/:id/edit', async (req, res) => {
 
     try {
         await Post.findById(req.params.id, (err, foundPost) => {
@@ -106,7 +108,6 @@ router.get('/:id/edit', ensureAuthenticated, async (req, res) => {
                 res.redirect('/')
             } else {
                 res.render('edit-post', {
-                    user: req.user,
                     post: foundPost,
                     title: 'Yay Kyi Yar Travel & Tour: Search Yay Kyi Yar Myanmar Hotels, Cheap Flights, Vacations, Tours',
                     navTitle: 'Yay Kyi Yar',
@@ -121,6 +122,7 @@ router.get('/:id/edit', ensureAuthenticated, async (req, res) => {
 
 
 })
+
 
 // Update Post
 router.put('/:id', async (req, res) => {
