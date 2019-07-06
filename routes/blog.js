@@ -3,16 +3,13 @@ const jsonData = require('../public/data/data.json')
 // const postData = require('../public/data/post.json')
 const mongoose = require('mongoose')
 const Post = mongoose.model('Post')
-const { ensureAuthenticated, forwardAuthenticated } = require('../configs/auth')
+const {
+    ensureAuthenticated,
+    forwardAuthenticated
+} = require('../configs/auth')
 const log = console.log
 const router = express.Router()
 
-// Dashboard
-router.get('/blog/new', ensureAuthenticated, (req, res) =>
-    res.render('new', {
-        user: req.user
-    })
-)
 
 // Blog : Show all post from DB
 router.get('/', async (req, res) => {
@@ -42,9 +39,10 @@ router.get('/', async (req, res) => {
 })
 
 // Call to ceate a Blog new post
-router.get('/new', async (req, res) => {
+router.get('/new', ensureAuthenticated, async (req, res) => {
     try {
         await res.render('new', {
+            user: req.user,
             title: 'Yay Kyi Yar Travel & Tour: Search Yay Kyi Yar Myanmar Hotels, Cheap Flights, Vacations, Tours',
             navTitle: 'Yay Kyi Yar',
             company: 'Travel & Tour Co., Ltd.',
@@ -54,6 +52,10 @@ router.get('/new', async (req, res) => {
         res.status(304).send(e)
     }
 })
+
+
+
+
 
 // Create Blog Post
 router.post('/', async (req, res) => {
@@ -96,7 +98,7 @@ router.get('/:id', async (req, res) => {
 })
 
 // Edit Post
-router.get('/:id/edit', async (req, res) => {
+router.get('/:id/edit', ensureAuthenticated, async (req, res) => {
 
     try {
         await Post.findById(req.params.id, (err, foundPost) => {
@@ -104,6 +106,7 @@ router.get('/:id/edit', async (req, res) => {
                 res.redirect('/')
             } else {
                 res.render('edit-post', {
+                    user: req.user,
                     post: foundPost,
                     title: 'Yay Kyi Yar Travel & Tour: Search Yay Kyi Yar Myanmar Hotels, Cheap Flights, Vacations, Tours',
                     navTitle: 'Yay Kyi Yar',
