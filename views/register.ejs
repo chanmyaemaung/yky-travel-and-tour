@@ -1,39 +1,78 @@
-<% include _layouts/layouts-header %>
-<div class="row mt-5">
-    <div class="col-md-6 m-auto">
-        <div class="card card-body">
-            <h1 class="text-center mb-3">
-                <i class="fas fa-user-plus"></i> Register
-            </h1>
-            <% include _layouts/messages %>
-            <form action="/register" method="POST">
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="name" id="name" name="name" class="form-control" placeholder="Enter Name"
-                        value="<%= typeof name != 'undefined' ? name : '' %>" />
-                </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" class="form-control" placeholder="Enter Email"
-                        value="<%= typeof email != 'undefined' ? email : '' %>" />
-                </div>
-                <div class="form-group">
-                    <label for="password">Password</label>
-                    <input type="password" id="password" name="password" class="form-control"
-                        placeholder="Create Password" value="<%= typeof password != 'undefined' ? password : '' %>" />
-                </div>
-                <div class="form-group">
-                    <label for="password2">Confirm Password</label>
-                    <input type="password" id="password2" name="password2" class="form-control"
-                        placeholder="Confirm Password"
-                        value="<%= typeof password2 != 'undefined' ? password2 : '' %>" />
-                </div>
-                <button type="submit" class="btn btn-primary btn-block">
-                    Register
-                </button>
-            </form>
-            <p class="lead mt-4">Have An Account? <a href="/login">Login</a></p>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://bootswatch.com/4/journal/bootstrap.min.css" />
+    <title>Yay Kyi Yar || Register</title>
+
+    <!-- PEAGE DEFAULT: SEO TAGS -->
+    <meta name="author" content="Yay Kyi Yar || Login">
+
+    <!-- Schema.org markup for Google+ -->
+    <meta itemprop="name" content="Yay Kyi Yar || Login">
+    <meta itemprop="description"
+        content="Myanmar’s first one-stop online travel portal, offering the largest inventory of hotels, flights, cars, buses, and tours, with multiple secure payment options for local and international travelers.">
+    <meta itemprop="image" content="/img/yky-img/logo.png">
+
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" content="Yay Kyi Yar || Login">
+    <meta name="twitter:site" content="Yay Kyi Yar Travel and Tours">
+    <meta name="twitter:title"
+        content="Visas, Flights, Hotels, Buses, Tours, Visa & Cars Booking - Myanmar | Yay Kyi Yar">
+    <meta name="twitter:description"
+        content="Myanmar’s first one-stop online travel portal, offering the largest inventory of hotels, flights, cars, buses, and tours, with multiple secure payment options for local and international travelers.">
+    <meta name="twitter:image" content="/img/yky-img/logo.png">
+
+    <!-- Open Graph data -->
+    <meta property="og:title" content="Yay Kyi Yar || Login" />
+    <meta property="og:type" content="Yay Kyi Yar || Login" />
+    <meta property="og:url" content="http://yaykyiyar.com" />
+    <meta property="og:image" content="/img/yky-img/logo.png" />
+    <meta property="og:description"
+        content="Myanmar’s first one-stop online travel portal, offering the largest inventory of hotels, flights, cars, buses, and tours, with multiple secure payment options for local and international travelers.">
+
+
+    <div class="row mt-5">
+        <div class="col-md-6 m-auto">
+            <div class="card card-body">
+                <h1 class="text-center mb-3">
+                    <i class="fas fa-user-plus"></i> Register
+                </h1>
+                <% include _layouts/messages %>
+                <form action="/register" method="POST">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="name" id="name" name="name" class="form-control" placeholder="Enter Name"
+                            value="<%= typeof name != 'undefined' ? name : '' %>" />
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" class="form-control" placeholder="Enter Email"
+                            value="<%= typeof email != 'undefined' ? email : '' %>" />
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" class="form-control"
+                            placeholder="Create Password"
+                            value="<%= typeof password != 'undefined' ? password : '' %>" />
+                    </div>
+                    <div class="form-group">
+                        <label for="password2">Confirm Password</label>
+                        <input type="password" id="password2" name="password2" class="form-control"
+                            placeholder="Confirm Password"
+                            value="<%= typeof password2 != 'undefined' ? password2 : '' %>" />
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">
+                        Register
+                    </button>
+                </form>
+                <p class="lead mt-4">Have An Account? <a href="/login">Login</a></p>
+            </div>
         </div>
     </div>
-</div>
-<% include _layouts/layouts-footer %>
+    <% include _layouts/layouts-footer %>
